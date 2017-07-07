@@ -1,0 +1,51 @@
+<div class="stuff">hello {{name}}</div>
+<p>this stuff {{html}}</p>
+<p>is compiled to {{{html}}}</p>
+
+the time is:
+
+<em>{{leftpad(h, 2, "0")}}:{{leftpad(m, 2, "0")}}:{{leftpad(s, 2, "0")}}</em>
+
+<script>
+  import {
+    leftpad
+  } from "../lib/helpers";
+
+  export default {
+    data() {
+      return {
+        name: "everybody",
+        html: "<strong>stuff</strong>",
+        time: new Date()
+      }
+    },
+    oncreate() {
+      this.interval = setInterval(() => {
+        this.set({
+          time: new Date()
+        })
+      })
+    },
+    ondestroy() {
+      clearInterval(this.interval)
+    },
+    computed: {
+      h: time => time.getHours(),
+      m: time => time.getMinutes(),
+      s: time => time.getSeconds()
+    },
+    helpers: {
+      leftpad
+    }
+  }
+</script>
+
+<style>
+  .stuff {
+    color: gold
+  }
+
+  strong {
+    color: crimson
+  }
+</style>
