@@ -1,10 +1,24 @@
-<div class="stuff">hello {{name}}</div>
-<p>this stuff {{html}}</p>
-<p>is compiled to {{{html}}}</p>
+<style>
+  .stuff {
+    color: crimson
+  }
 
-the time is:
+  strong {
+    color: goldenrod
+  }
 
-<em>{{leftpad(h, 2, "0")}}:{{leftpad(m, 2, "0")}}:{{leftpad(s, 2, "0")}}</em>
+  em {
+    color: royalblue
+  }
+</style>
+
+<section>
+  <p class="stuff">hello {{name}}</p>
+
+  <p>with triple curly braces {{html}} is compiled to {{{html}}}</p>
+
+  <p>Time is: <em>{{leftpad(h, 2, "0")}}:{{leftpad(m, 2, "0")}}:{{leftpad(s, 2, "0")}}</em></p>
+</section>
 
 <script>
   import {
@@ -39,13 +53,3 @@ the time is:
     }
   }
 </script>
-
-<style>
-  .stuff {
-    color: gold
-  }
-
-  strong {
-    color: crimson
-  }
-</style>
