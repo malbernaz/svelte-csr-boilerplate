@@ -61,3 +61,7 @@ typings/
 *.DS_Store
 .AppleDouble
 .LSOverride
+
+# Project
+
+public/assets
