@@ -1,7 +1,7 @@
 {
-  "name": "svelte-test",
+  "name": "svelte-csr-boilerplate",
   "version": "1.0.0",
-  "description": "svelte test",
+  "description": "svelte csr boilerplate",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
